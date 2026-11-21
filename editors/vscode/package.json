@@ -1,0 +1,42 @@
+{
+    "name": "corum-language",
+    "displayName": "Corum Language Support",
+    "description": "Syntax highlighting, snippets, and language configuration for the Corum programming language",
+    "version": "0.1.0",
+    "publisher": "collumy",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "corum",
+                "aliases": [
+                    "Corum",
+                    "corum"
+                ],
+                "extensions": [
+                    ".cr"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "corum",
+                "scopeName": "source.corum",
+                "path": "./syntaxes/corum.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "corum",
+                "path": "./snippets/corum.json"
+            }
+        ]
+    }
+}

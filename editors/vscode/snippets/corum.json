@@ -1,0 +1,201 @@
+{
+    "Main Function": {
+        "prefix": "main",
+        "body": [
+            "fun main(args: Array<String>) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Corum main function"
+    },
+    "Main Simple": {
+        "prefix": "main0",
+        "body": [
+            "fun main() {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Corum simple main function"
+    },
+    "Function": {
+        "prefix": "fun",
+        "body": [
+            "fun ${1:name}(${2:params}): ${3:Void} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Function declaration"
+    },
+    "Operator Function": {
+        "prefix": "opfun",
+        "body": [
+            "operator fun ${1:plus}(${2:other}: ${3:Type}): ${4:Type} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Operator function declaration"
+    },
+    "Inline Function": {
+        "prefix": "infun",
+        "body": [
+            "inline fun ${1:name}(${2:params}): ${3:Type} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Inline function declaration"
+    },
+    "Const Function": {
+        "prefix": "cfun",
+        "body": [
+            "const fun ${1:name}(${2:params}): ${3:Type} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Const function for compile-time execution"
+    },
+    "Val Variable": {
+        "prefix": "val",
+        "body": [
+            "val ${1:name}: ${2:Int32} = ${3:value}"
+        ],
+        "description": "Immutable variable"
+    },
+    "Var Variable": {
+        "prefix": "var",
+        "body": [
+            "var ${1:name}: ${2:Int32} = ${3:value}"
+        ],
+        "description": "Mutable variable"
+    },
+    "Const Variable": {
+        "prefix": "const",
+        "body": [
+            "const val ${1:NAME}: ${2:Int32} = ${3:value}"
+        ],
+        "description": "Compile-time constant"
+    },
+    "Class": {
+        "prefix": "class",
+        "body": [
+            "class ${1:Name}(${2:params}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Class declaration"
+    },
+    "Struct": {
+        "prefix": "struct",
+        "body": [
+            "struct ${1:Name} {",
+            "\t${2:field}: ${3:Int32}",
+            "}"
+        ],
+        "description": "Struct declaration"
+    },
+    "Object (Singleton)": {
+        "prefix": "object",
+        "body": [
+            "object ${1:Name} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Singleton object declaration"
+    },
+    "Enum": {
+        "prefix": "enum",
+        "body": [
+            "enum ${1:Name} {",
+            "\t${2:CASE1},",
+            "\t${3:CASE2}",
+            "}"
+        ],
+        "description": "Enum declaration"
+    },
+    "If-Else": {
+        "prefix": "if",
+        "body": [
+            "if (${1:condition}) {",
+            "\t${2}",
+            "} else {",
+            "\t${0}",
+            "}"
+        ],
+        "description": "If-else branch"
+    },
+    "For Loop": {
+        "prefix": "for",
+        "body": [
+            "for (${1:i} in ${2:0} until ${3:count}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "For range loop"
+    },
+    "While Loop": {
+        "prefix": "while",
+        "body": [
+            "while (${1:condition}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "While loop"
+    },
+    "Println": {
+        "prefix": "sout",
+        "body": [
+            "println(\"$1\", $0)"
+        ],
+        "description": "Print line with newline"
+    },
+    "Print": {
+        "prefix": "sou",
+        "body": [
+            "print(\"$1\", $0)"
+        ],
+        "description": "Print without newline"
+    },
+    "Array Of": {
+        "prefix": "arrof",
+        "body": [
+            "arrayOf(${1:elem1, elem2})"
+        ],
+        "description": "Array literal constructor"
+    },
+    "Array Constructor": {
+        "prefix": "arrinit",
+        "body": [
+            "Array(${1:size}) { ${2:i} -> ${0:i} }"
+        ],
+        "description": "Array constructor with lambda initializer"
+    },
+    "Defer Statement": {
+        "prefix": "defer",
+        "body": [
+            "defer ${1:free(ptr)}"
+        ],
+        "description": "Deferred cleanup execution"
+    },
+    "Unsafe Block": {
+        "prefix": "unsafe",
+        "body": [
+            "unsafe {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Unsafe memory block"
+    },
+    "Module Header": {
+        "prefix": "module",
+        "body": [
+            "module ${1:name}"
+        ],
+        "description": "Module definition"
+    },
+    "Import": {
+        "prefix": "import",
+        "body": [
+            "import ${1:path}${2: as ${3:Alias}}"
+        ],
+        "description": "Import directive"
+    }
+}
